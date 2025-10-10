@@ -8,8 +8,8 @@ class GifSwitchCupertino extends StatefulWidget {
     this.width = 81,
     this.height = 31,
     this.padding = 2,
-    this.darkAsset = 'assets/dark_mode.gif',
-    this.lightAsset = 'assets/light_mode.gif',
+    this.darkAsset = 'assets/dark_mode.jpeg',
+    this.lightAsset = 'assets/light_mode.jpeg',
   });
 
   final bool value;
@@ -68,7 +68,7 @@ class _GifSwitchCupertinoState extends State<GifSwitchCupertino> {
               left: v ? w - knob - pad : pad,
               top: pad,
               child: AnimatedOpacity(
-                opacity: v ? 0.7 : 1.0, // mờ khi bật, sáng khi tắt (tùy chỉnh)
+                opacity: 1.0,
                 duration: const Duration(milliseconds: 200),
                 curve: Curves.easeInOut,
                 child: Container(

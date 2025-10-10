@@ -1,5 +1,5 @@
 name: efep_chat
-description: "A new Flutter project."
+description: "An app that I want to build for my friends use to talk everyday."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -11,11 +11,15 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  flutter_riverpod: ^3.0.1
+  dio: ^5.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  custom_lint: ^0.8.0
+  riverpod_lint: ^3.0.1
 
 flutter:
   uses-material-design: true
@@ -24,10 +28,26 @@ flutter:
       fonts:
         - asset: assets/fonts/Knewave-Regular.ttf
           weight: 400
+    - family: BBHSansBogle-Regular
+      fonts:
+        - asset: assets/fonts/BBHSansBogle-Regular.ttf
+          weight: 200
+    - family: SCp - light
+      fonts:
+           - asset: assets/fonts/SourceCodePro_light.ttf
+             weight: 200
+    - family: SCp 
+      fonts:
+          - asset: assets/fonts/SourceCodePro.ttf
+            weight: 500
+
   assets:
-    - assets/dark_mode.gif
-    - assets/light_mode.gif
     - assets/dark_mode.jpeg
-    - assets/avatar.jpeg
-    - assets/dark_avatar.jpeg
+    - assets/light_mode.jpeg
+    - assets/light_avatar.jpeg
     - assets/avatar.gif
+    - assets/myPic.jpeg
+
+analyzer:
+  plugins:
+    - custom_lint
